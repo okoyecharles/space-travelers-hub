@@ -1,12 +1,14 @@
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { HashRouter, Routes } from 'react-router-dom';
+import Header from './components/Header';
 
 function App() {
   return (
-    <h1 className="text-center">
-      <strong>
-        Setting Up Space Travelers&apos; Hub
-      </strong>
-    </h1>
+    <HashRouter>
+      <Header />
+      <Routes />
+    </HashRouter>
   );
 }
 

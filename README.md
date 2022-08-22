@@ -1,5 +1,7 @@
 <div id="top"></div>
 
+[![](https://img.shields.io/badge/Micronaut-AngomCharlie-blue)](https://github.com/OkoyeCharles/Space-Travelers-Hub)
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -111,3 +113,9 @@ Don't forget to give the project a star! Thanks again!
 
     - ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) [@OkoyeCharles_](https://twitter.com/okoyecharles_)
     - ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white) [@Charles Okoye](https://www.linkedin.com/in/charles-okoye-633374236/)
+
+    👤 Angom Chittaranjan
+
+- GitHub: [@AngomRanjan](https://github.com/AngomRanjan)
+- Twitter: [@RanjanAngom](https://twitter.com/RanjanAngom)
+- LinkedIn: [angom-chittaranjan](https://linkedin.com/in/angom-chittaranjan)

@@ -5,7 +5,7 @@ function App() {
         Setting Up Space Travelers&apos; Hub
       </strong>
     </h1>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -11,17 +11,17 @@ const Header = () => (
       </div>
       <ul className="my-0 d-flex align-items-center justify-content-around">
         <li className="px-3">
-          <NavLink to="/">
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inActive')}>
             Rocket
           </NavLink>
         </li>
         <li className="border-start px-3">
-          <NavLink to="/Missions" className="active">
+          <NavLink to="/Missions" className={({ isActive }) => (isActive ? 'active' : 'inActive')}>
             Missions
           </NavLink>
         </li>
         <li className="border-start px-3">
-          <NavLink to="/Profile" className="active">
+          <NavLink to="/Profile" className={({ isActive }) => (isActive ? 'active' : 'inActive')}>
             My Profile
           </NavLink>
         </li>

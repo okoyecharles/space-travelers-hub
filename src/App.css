@@ -21,7 +21,6 @@ a:-webkit-any-link {
   text-decoration: underline !important;
 }
 
-.active:focus {
-  color: #09599b;
-  text-decoration: underline !important;
+.badge {
+  background-color: #2fcacf;
 }

@@ -11,7 +11,9 @@ const Header = () => (
       </div>
       <ul className="my-0 d-flex align-items-center justify-content-around">
         <li className="px-3">
-          Rocket
+          <NavLink to="/">
+            Rocket
+          </NavLink>
         </li>
         <li className="border-start px-3">
           Mission

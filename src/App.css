@@ -20,3 +20,8 @@ a:-webkit-any-link {
   color: #09599b;
   text-decoration: underline !important;
 }
+
+.active:focus {
+  color: #09599b;
+  text-decoration: underline !important;
+}

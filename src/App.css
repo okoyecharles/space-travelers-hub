@@ -16,10 +16,12 @@ a:-webkit-any-link {
   font-weight: bold;
 }
 
-.active:focus {
+a:focus {
   color: #09599b;
   text-decoration: underline !important;
 }
+
+.active { text-decoration: underline !important; }
 
 .badge {
   background-color: #2fcacf;

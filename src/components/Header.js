@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 import logo from '../assets/images/planet.png';
 
 const Header = () => (
@@ -17,7 +17,9 @@ const Header = () => (
           Mission
         </li>
         <li className="border-start px-3">
-          Profile
+          <NavLink to="/Profile" className="active">
+            My Profile
+          </NavLink>
         </li>
       </ul>
     </nav>

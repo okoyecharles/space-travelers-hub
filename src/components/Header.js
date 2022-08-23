@@ -16,7 +16,9 @@ const Header = () => (
           </NavLink>
         </li>
         <li className="border-start px-3">
-          Mission
+          <NavLink to="/Missions" className="active">
+            Missions
+          </NavLink>
         </li>
         <li className="border-start px-3">
           <NavLink to="/Profile" className="active">

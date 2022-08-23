@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyProfile = () => {
+const Profile = () => {
   const temp = 'test';
   return (
     <div className="container">
@@ -28,4 +28,4 @@ const MyProfile = () => {
   );
 };
 
-export default MyProfile;
+export default Profile;

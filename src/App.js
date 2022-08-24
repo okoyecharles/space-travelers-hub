@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Profile from './components/Profile';
-import Rocket from './components/Rocket';
+import Rocket from './components/Rockets';
 import Missions from './components/Missions';
 
 function App() {

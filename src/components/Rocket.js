@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { Button, Badge } from 'react-bootstrap';
 import { reserveRocket } from '../redux/rocket/actions';
 
 function Rocket({
@@ -12,18 +13,28 @@ function Rocket({
     dispatch(reserveRocket(id));
   };
   return (
-    <div className="rocket">
-      <div className="rocket__container">
-        <img className="rocket__image" src={image} alt={id} />
+    <div className="rocket my-4">
+      <div className="rocket__container d-flex gap-4">
+        <img className="rocket__image w-25" src={image} alt={id} />
         <div className="rocket__info">
           <h2 className="rocket__title">{name}</h2>
           <p className="rocket__description">
-            {reserved && (<strong>RESERVED</strong>)}
+            {reserved && (
+            <Badge bg="success" style={{ minWidth: '120px' }} className="mx-2 p-2">
+              Reserved
+            </Badge>
+            )}
             {description}
           </p>
-          <button onClick={handleClick} type="button">
+          <Button
+            type="button"
+            onClick={handleClick}
+            variant={!reserved ? 'primary' : 'light'}
+            className="p-2 rounded text-center"
+            style={{ minWidth: '120px' }}
+          >
             {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button, Badge } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissionsAction, joinMissionAction } from '../redux/missions/missions';
+import { getMissionsAction, joinMissionAction, leaveMissionAction } from '../redux/missions/missions';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -40,14 +40,18 @@ const Mission = () => {
                 style={{ minWidth: '120px' }}
                 className="p-3"
               >
-                {msn.reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}
+                {msn.reserved ? 'Active Member' : 'Not A Member'}
               </Badge>
             </td>
             <td className="p-2 border align-middle">
               <Button
                 type="button"
                 onClick={() => {
-                  if (!msn.reserved) dispatch(joinMissionAction(msn.id));
+                  if (!msn.reserved) {
+                    dispatch(joinMissionAction(msn.id));
+                  } else {
+                    dispatch(leaveMissionAction(msn.id));
+                  }
                 }}
                 variant={!msn.reserved ? 'success' : 'danger'}
                 className="p-2 rounded text-center"

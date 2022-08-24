@@ -11,8 +11,6 @@ function Rockets() {
     if (!rockets.length) dispatch(fetchRockets());
   }, []);
 
-  console.log(rockets);
-
   return (
     <div className="rocket__container">
       <div className="col m-3 p-3 border">
@@ -23,6 +21,7 @@ function Rockets() {
             id={rocket.rocketId}
             description={rocket.description}
             image={rocket.image}
+            reserved={rocket.reserved}
           />
         ))}
       </div>

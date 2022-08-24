@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../redux/rocket/actions';
 
 function Rocket({
-  id, image, name, description,
+  id, image, name, description, reserved,
 }) {
-  const [reserved, setReserved] = useState(false);
+  const dispatch = useDispatch();
+
   const handleClick = () => {
-    setReserved((prevState) => !prevState);
+    dispatch(reserveRocket(id));
   };
   return (
     <div className="rocket">
@@ -15,7 +18,9 @@ function Rocket({
         <div className="rocket__info">
           <h2 className="rocket__title">{name}</h2>
           <p className="rocket__description">{description}</p>
-          <button onClick={handleClick} type="button">{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+          <button onClick={handleClick} type="button">
+            {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+          </button>
         </div>
       </div>
     </div>
@@ -23,10 +28,11 @@ function Rocket({
 }
 
 Rocket.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default Rocket;

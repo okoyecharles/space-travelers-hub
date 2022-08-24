@@ -13,15 +13,6 @@ const Mission = () => {
     }
   }, []);
 
-  // const handleClick = (e) => {
-  //   if (e.target.innerText === 'Join Mission') {
-  //     console.log(e.target.innerText);
-  //     joinMissionAction(e.target.id);
-  //   } else {
-  //     console.log(e.target.id);
-  //   }
-  // };
-
   return (
     <>
       {

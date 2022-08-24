@@ -17,7 +17,10 @@ function Rocket({
         <img className="rocket__image" src={image} alt={id} />
         <div className="rocket__info">
           <h2 className="rocket__title">{name}</h2>
-          <p className="rocket__description">{description}</p>
+          <p className="rocket__description">
+            {reserved && (<strong>RESERVED</strong>)}
+            {description}
+          </p>
           <button onClick={handleClick} type="button">
             {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
           </button>

@@ -22,7 +22,3 @@ a:focus {
 }
 
 .active { text-decoration: underline !important; }
-
-.badge {
-  background-color: #2fcacf;
-}

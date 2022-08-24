@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Button, Badge } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { getMissionsAction } from '../redux/missions/missions';
 
 const Mission = () => {
-  const missions = [{ id: '1', description: 'description', reserved: false }];
+  const dispatch = useDispatch();
+  const missions = useSelector((state) => state.missions);
+
+  useEffect(() => {
+    if (missions.length === 0) {
+      dispatch(getMissionsAction());
+    }
+  }, []);
   return (
     <>
       {
@@ -14,43 +24,24 @@ const Mission = () => {
               <p>{msn.name}</p>
             </th>
             <td className="border p-2 pb-5">{msn.description}</td>
-            <td className="border p-1">
-              {msn.reserved
-                ? (
-                  <p
-                    className="text-info text-center bg-info text-white border rounded"
-                    style={{ minWidth: '120px' }}
-                  >
-                    ACTIVE MEMBER
-                  </p>
-                ) : (
-                  <p
-                    className="border rounded text-danger text-center bg-secondary text-white"
-                    style={{ minWidth: '120px' }}
-                  >
-                    NOT A MEMBER
-                  </p>
-                )}
+            <td className="border p-1 align-middle">
+              <Badge
+                bg={msn.reserved ? 'primary' : 'secondary'}
+                style={{ minWidth: '120px' }}
+                className="p-3"
+              >
+                {msn.reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}
+              </Badge>
             </td>
-            <td className="p-2 border">
-              {!msn.reserved
-                ? (
-                  <button
-                    type="button"
-                    className="py-2 border-success rounded text-center"
-                    style={{ minWidth: '100px' }}
-                  >
-                    Join Mission
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    className="py-2 border border-danger rounded text-danger text-center"
-                    style={{ minWidth: '100px' }}
-                  >
-                    Leave Mission
-                  </button>
-                )}
+            <td className="p-2 border align-middle">
+              <Button
+                type="button"
+                variant={!msn.reserved ? 'success' : 'danger'}
+                className="p-2 rounded text-center"
+                style={{ minWidth: '120px' }}
+              >
+                {!msn.reserved ? 'Join Mission' : 'Leave Mission'}
+              </Button>
             </td>
           </tr>
         ))

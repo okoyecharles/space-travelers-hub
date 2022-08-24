@@ -5,10 +5,12 @@ const BASE_URL = 'https://api.spacexdata.com/v3/rockets';
 
 const loadRockets = (rocketData) => {
   const rockets = rocketData.map((rocket) => ({
-    id: rocket.rocket_id,
+    id: rocket.id,
+    rocketId: rocket.rocket_id,
     name: rocket.rocket_name,
     type: rocket.rocket_type,
     image: rocket.flickr_images[0],
+    description: rocket.description,
   }));
   return {
     type: actionType.GET_ROCKETS,

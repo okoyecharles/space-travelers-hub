@@ -31,6 +31,7 @@
 ## About The Project
 
 In this project, I worked with real live data from the SpaceX API. I built a web application for a company that provides commercial and scientific space travel services. Built with React and Redux!
+[Click here to view this project live](https://charles-space-travelers.netlify.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

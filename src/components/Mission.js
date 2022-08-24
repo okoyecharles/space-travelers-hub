@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button, Badge } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissionsAction } from '../redux/missions/missions';
+import { getMissionsAction, joinMissionAction } from '../redux/missions/missions';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -12,6 +12,16 @@ const Mission = () => {
       dispatch(getMissionsAction());
     }
   }, []);
+
+  // const handleClick = (e) => {
+  //   if (e.target.innerText === 'Join Mission') {
+  //     console.log(e.target.innerText);
+  //     joinMissionAction(e.target.id);
+  //   } else {
+  //     console.log(e.target.id);
+  //   }
+  // };
+
   return (
     <>
       {
@@ -36,6 +46,9 @@ const Mission = () => {
             <td className="p-2 border align-middle">
               <Button
                 type="button"
+                onClick={() => {
+                  if (!msn.reserved) dispatch(joinMissionAction(msn.id));
+                }}
                 variant={!msn.reserved ? 'success' : 'danger'}
                 className="p-2 rounded text-center"
                 style={{ minWidth: '120px' }}

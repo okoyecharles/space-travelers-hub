@@ -11,6 +11,7 @@ const loadRockets = (rocketData) => {
     type: rocket.rocket_type,
     image: rocket.flickr_images[0],
     description: rocket.description,
+    reserved: false,
   }));
   return {
     type: actionType.GET_ROCKETS,
@@ -28,5 +29,10 @@ const fetchRockets = () => async (dispatch) => {
       dispatch(loadRockets(res.data));
     });
 };
+
+export const reserveRocket = (id) => ({
+  type: actionType.RESERVE_ROCKET,
+  payload: id,
+});
 
 export default fetchRockets;

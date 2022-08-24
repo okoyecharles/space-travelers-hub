@@ -40,7 +40,7 @@ const Mission = () => {
                 style={{ minWidth: '120px' }}
                 className="p-3"
               >
-                Join Mission
+                {msn.reserved ? 'Active Member' : 'Not A Member'}
               </Badge>
             </td>
             <td className="p-2 border align-middle">

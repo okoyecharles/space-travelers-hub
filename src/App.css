@@ -16,6 +16,7 @@ a:-webkit-any-link {
   font-weight: bold;
 }
 
+.active,
 a:focus {
   color: #09599b;
   text-decoration: underline !important;

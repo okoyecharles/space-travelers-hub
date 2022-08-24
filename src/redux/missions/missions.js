@@ -3,6 +3,7 @@ import axios from 'axios';
 const BASE_URL = 'https://api.spacexdata.com/v3/';
 const MISSIONS_URL = `${BASE_URL}missions`;
 const GET_MISSIONS = 'GET_MISSIONS';
+const JOIN_MISSION = 'JOIN_MISSION';
 
 const initialState = [];
 
@@ -30,10 +31,23 @@ export const getMissionsAction = () => async (dispatch) => {
     });
 };
 
+export const joinMissionAction = (id) => ({
+  type: JOIN_MISSION,
+  payload: id,
+});
+
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
       return [...action.payload];
+
+    case JOIN_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.id !== action.payload) { return mission; }
+        return { ...mission, reserved: true };
+      });
+      return newState;
+    }
 
     default:
       return state;

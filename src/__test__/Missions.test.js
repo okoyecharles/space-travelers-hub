@@ -4,6 +4,7 @@ import Missions from '../components/Missions';
 import store from '../redux/configureStore';
 
 import { joinMissionAction, leaveMissionAction, fetchMissionsApiAction } from '../redux/missions/missions';
+
 describe('Missions tests', () => {
   it('render test', () => {
     const tree = renderer.create(

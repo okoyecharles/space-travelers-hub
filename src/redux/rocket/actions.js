@@ -3,7 +3,7 @@ import * as actionType from './actionTypes';
 
 const BASE_URL = 'https://api.spacexdata.com/v3/rockets';
 
-const loadRockets = (rocketData) => {
+export const loadRockets = (rocketData) => {
   const rockets = rocketData.map((rocket) => ({
     id: rocket.id,
     rocketId: rocket.rocket_id,

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Rocket should render 1`] = `
+<div
+  className="rocket my-4"
+>
+  <div
+    className="rocket__container d-flex gap-4"
+  >
+    <img
+      alt="Rocket"
+      className="rocket__image w-25"
+      src="image.png"
+    />
+    <div
+      className="rocket__info"
+    >
+      <h2
+        className="rocket__title"
+      >
+        Rocket
+      </h2>
+      <p
+        className="rocket__description"
+      >
+        A test rocket
+      </p>
+      <button
+        className="p-2 rounded text-center btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "120px",
+          }
+        }
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+</div>
+`;

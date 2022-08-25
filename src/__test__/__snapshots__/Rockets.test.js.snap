@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions tests render test 1`] = `
+<div
+  className="rocket__container"
+>
+  <div
+    className="col m-3 p-3 border"
+  />
+</div>
+`;

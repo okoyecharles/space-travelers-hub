@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import Mission from '../components/Mission';
 import store from '../redux/configureStore';
 
-describe('Test for Rockets', () => {
+describe('Test for Mission', () => {
   test('should render', () => {
     const msn = {
       id: 1,

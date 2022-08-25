@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions tests render test 1`] = `
+<div
+  className="px-3 container"
+>
+  <div
+    className="table-responsive-md"
+  >
+    <table
+      className="my-5 table table-striped"
+    >
+      <thead
+        className="p-5"
+      >
+        <tr
+          className="border"
+        >
+          <th
+            className="border"
+          >
+            Mission
+          </th>
+          <th
+            className="border"
+          >
+            Description
+          </th>
+          <th
+            className="border"
+          >
+            Status
+          </th>
+          <th
+            className="border"
+          >
+             
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="p-5"
+      />
+    </table>
+  </div>
+</div>
+`;

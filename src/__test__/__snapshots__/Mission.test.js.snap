@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Mission should render 1`] = `
+<tr>
+  <th
+    className="border fs-5 flex p-2"
+  >
+    <p>
+      dfg
+    </p>
+  </th>
+  <td
+    className="border p-2 pb-5"
+  >
+    ghdj
+  </td>
+  <td
+    className="border p-1 align-middle"
+  >
+    <span
+      className="p-3 badge bg-secondary"
+      style={
+        Object {
+          "minWidth": "120px",
+        }
+      }
+    >
+      Not A Member
+    </span>
+  </td>
+  <td
+    className="p-2 border align-middle"
+  >
+    <button
+      className="p-2 rounded text-center btn btn-success"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "minWidth": "120px",
+        }
+      }
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;

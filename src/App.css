@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: #0b81e2;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.active,
+a:focus {
+  color: #09599b;
+  text-decoration: underline !important;
+}
+
+.active { text-decoration: underline !important; }

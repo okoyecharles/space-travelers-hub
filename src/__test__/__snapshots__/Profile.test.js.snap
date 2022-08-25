@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Rockets should render 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row mt-4"
+  >
+    <div
+      className="col"
+    >
+      <h2
+        className="text-left mb-3"
+      >
+        My Missions
+      </h2>
+      <ul
+        className="mb-3 p-0"
+      >
+        <li
+          className="border m-0 p-3"
+        >
+          None
+        </li>
+      </ul>
+    </div>
+    <div
+      className="col"
+    >
+      <h2
+        className="text-left mb-3"
+      >
+        My Rockets
+      </h2>
+      <ul
+        className="mb-3 p-0"
+      >
+        <li
+          className="border m-0 p-3"
+        >
+          None
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

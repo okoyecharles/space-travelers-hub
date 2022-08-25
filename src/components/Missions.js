@@ -9,9 +9,7 @@ export default function Missions() {
   const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
-    if (missions.length === 0) {
-      dispatch(getMissionsAction());
-    }
+    if (!missions.length) dispatch(getMissionsAction());
   }, []);
 
   return (

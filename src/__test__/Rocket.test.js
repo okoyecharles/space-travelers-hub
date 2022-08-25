@@ -13,17 +13,17 @@ describe('Test for Rocket', () => {
       image: 'image.png',
       name: 'Rocket',
       description: 'A test rocket',
-      reserved: false
+      reserved: false,
     };
     const tree = renderer.create(
       <Provider store={store}>
         <Rocket
-            key={rocket.id}
-            name={rocket.name}
-            id={rocket.rocketId}
-            description={rocket.description}
-            image={rocket.image}
-            reserved={rocket.reserved}
+          key={rocket.id}
+          name={rocket.name}
+          id={rocket.rocketId}
+          description={rocket.description}
+          image={rocket.image}
+          reserved={rocket.reserved}
         />
       </Provider>,
     );

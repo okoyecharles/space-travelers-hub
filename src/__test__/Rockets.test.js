@@ -2,8 +2,6 @@ import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import Rockets from '../components/Rockets';
 import store from '../redux/configureStore';
-
-import { joinMissionAction, leaveMissionAction, fetchMissionsApiAction } from '../redux/missions/missions';
 import { reserveRocket, loadRockets } from '../redux/rocket/actions';
 
 describe('Missions tests', () => {
